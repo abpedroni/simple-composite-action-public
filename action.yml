@@ -1,0 +1,14 @@
+name: "Say hello from Private Repo"
+description: "Saying hello to specific user name"
+
+inputs:
+  username:
+    description: "Username description"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+      - name: Saying hello
+        shell: bash
+        run: echo Hello, ${{inputs.username}}!
